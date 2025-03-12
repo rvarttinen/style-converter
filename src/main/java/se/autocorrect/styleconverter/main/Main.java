@@ -88,7 +88,7 @@ public class Main implements Callable<Integer> {
 
 				String json = bufferedReader.lines().collect(Collectors.joining("\n"));
 
-				StyleConverter converter = StyleConverter.getDefaultJsonConvert();
+				StyleConverter converter = StyleConverter.getDefaultJsonConverter();
 				ThemeFile result = converter.convert(json);
 
 				String out = outputFile != null ? outputFile : System.getProperty("user.home") + "/out.xml";

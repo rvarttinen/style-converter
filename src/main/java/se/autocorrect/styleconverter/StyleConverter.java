@@ -80,7 +80,7 @@ public interface StyleConverter {
 	 * 
 	 * @return the default JSON converter
 	 */
-	static StyleConverter getDefaultJsonConvert() {
+	static StyleConverter getDefaultJsonConverter() {
 		return new DefaultJsonStyleConverter();
 	}
 }
