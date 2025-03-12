@@ -34,7 +34,7 @@ Running the tool from the commandline:
 java -jar json2xml.jar -h
 ```
 
-Using it prgrammatically, the entry point is through the `StyleConverter` interface: 
+Using it programmatically, the entry point is through the `StyleConverter` interface: 
 
 ```
   ...
