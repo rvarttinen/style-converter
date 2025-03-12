@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#f8f4f0" version="1" xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
+      
+    <!--###### TEXT styles ######-->
+       
+    <!--###### AREA styles ######-->
+      
+    <!--landcover-grass-park-->
+    <style-area fill="#ccd8e8c8" id="landcover-grass-park"/>
+      
+    <!--###### LINE styles ######-->
+       
+    <!--###### SYMBOL styles ######-->
+       
+    <!--###### ASSIGNMENT ######-->
+     
+    <m k="layer" v="park">
+        <m k="class">
+            <m v="public_park">
+                <area use="landcover-grass-park"/>
+            </m>
+        </m>
+    </m>
+</rendertheme>

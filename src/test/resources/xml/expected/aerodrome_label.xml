@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#f8f4f0" version="1" xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
+      
+    <!--###### TEXT styles ######-->
+      
+    <!--airport-label-major-->
+    <style-text fill="#666666" id="airport-label-major" k="name" size="12" text-font="Noto Sans Regular"/>
+      
+    <!--###### AREA styles ######-->
+       
+    <!--###### LINE styles ######-->
+       
+    <!--###### SYMBOL styles ######-->
+      
+    <!--airport-label-major-->
+    <style-symbol id="airport-label-major" src="Users\Admin\.sprites\airport_11.png"/>
+      
+    <!--###### ASSIGNMENT ######-->
+     
+    <m k="layer" v="aerodrome_label">
+        <m zoom-min="10">
+            <caption dy="-20" fill="#666666" font="Noto Sans Regular" id="airport-label-major" k="name" size="12"/>
+            <symbol use="airport-label-major"/>
+        </m>
+    </m>
+</rendertheme>

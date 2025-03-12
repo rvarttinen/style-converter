@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#e8e5d8" version="1" xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
+      
+    <!--###### TEXT styles ######-->
+      
+    <!--road_oneway-->
+    <style-text id="road_oneway" k="name"/>
+      
+    <!--###### AREA styles ######-->
+      
+    <!--road_area_pier-->
+    <style-area fill="#f8f4f0" id="road_area_pier"/>
+     
+    <!--highway-area-->
+    <style-area fill="#8fe3e3e3" id="highway-area"/>
+      
+    <!--###### LINE styles ######-->
+      
+    <!--highway_motorway_bridge_inner-->
+    <style-line cap="round" id="highway_motorway_bridge_inner"/>
+     
+    <!--highway-area-->
+    <style-line id="highway-area" stroke="#cfcdca"/>
+     
+    <!--highway-path-->
+    <style-line id="highway-path" stroke="#ccbbaa"/>
+     
+    <!--highway-minor-casing-->
+    <style-line cap="round" id="highway-minor-casing" stroke="#cfcdca"/>
+     
+    <!--highway-minor-->
+    <style-line cap="round" id="highway-minor" stroke="#ffffff"/>
+     
+    <!--highway-motorway-->
+    <style-line cap="round" id="highway-motorway" stroke="#ffcc88"/>
+     
+    <!--highway-motorway-casing-->
+    <style-line cap="butt" id="highway-motorway-casing" stroke="#e9ac77"/>
+     
+    <!--bridge-motorway-casing-->
+    <style-line id="bridge-motorway-casing" stroke="#e9ac77"/>
+     
+    <!--bridge-motorway-->
+    <style-line id="bridge-motorway" stroke="#ffcc88"/>
+     
+    <!--tunnel-service-track-->
+    <style-line id="tunnel-service-track" stroke="#ffffff"/>
+     
+    <!--tunnel-service-track-casing-->
+    <style-line id="tunnel-service-track-casing" stroke="#cfcdca"/>
+     
+    <!--highway-motorway-link-->
+    <style-line cap="round" id="highway-motorway-link" stroke="#ffcc88"/>
+     
+    <!--highway-motorway-link-casing-->
+    <style-line cap="round" id="highway-motorway-link-casing" stroke="#e9ac77"/>
+      
+    <!--###### SYMBOL styles ######-->
+      
+    <!--road_oneway-->
+    <style-symbol id="road_oneway" repeat="true" src="${xmlunit.ignore}"/>
+      
+    <!--###### ASSIGNMENT ######-->
+     
+    <m k="layer" v="transportation">
+        <m k="class">
+            <m k="oneway" v="1" zoom-min="15">
+                <m k="class" v="motorway|trunk|primary|secondary|tertiary|minor|service">
+                    <symbol use="road_oneway"/>
+                </m>
+            </m>
+            <m v="motorway">
+                <m k="brunnel" v="bridge">
+                    <m zoom-min="4">
+                        <line cap="round" fade="4" outline="highway_motorway_bridge_inner" width="2"/>
+                    </m>
+                    <m zoom-min="20">
+                        <line cap="round" fade="20" outline="highway_motorway_bridge_inner" width="30"/>
+                        <line fade="20" outline="bridge-motorway-casing" stroke="#e9ac77" width="26"/>
+                        <line fade="20" outline="bridge-motorway" stroke="#ffcc88" width="18"/>
+                    </m>
+                    <m zoom-min="5">
+                        <line fade="5" outline="bridge-motorway-casing" stroke="#e9ac77" width="1"/>
+                    </m>
+                    <m zoom-min="6">
+                        <line cap="round" fade="6" outline="highway_motorway_bridge_inner" stroke="#ffffff" width="1"/>
+                        <line fade="6" outline="bridge-motorway-casing" stroke="#e9ac77" width="1"/>
+                        <line fade="6" outline="bridge-motorway" stroke="#ffcc88" width="1"/>
+                    </m>
+                    <m zoom-min="7">
+                        <line fade="7" outline="bridge-motorway-casing" stroke="#e9ac77" width="1"/>
+                        <line fade="7" outline="bridge-motorway" stroke="#ffcc88" width="1"/>
+                    </m>
+                </m>
+            </m>
+            <m v="pier">
+                <area use="road_area_pier"/>
+            </m>
+            <m v="path">
+                <m k="brunnel" v="-|bridge|tunnel">
+                    <m zoom-min="20">
+                        <line fade="20" outline="highway-path" stroke="#ccbbaa"/>
+                    </m>
+                    <m zoom-min="15">
+                        <line fade="15" outline="highway-path" stroke="#ccbbaa"/>
+                    </m>
+                </m>
+            </m>
+            <m v="minor|service|track">
+                <m k="brunnel" v="-|tunnel">
+                    <m zoom-min="20">
+                        <line cap="round" fade="20" outline="highway-minor-casing" stroke="#cfcdca"/>
+                        <line cap="round" fade="20" outline="highway-minor" stroke="#ffffff"/>
+                    </m>
+                    <m zoom-min="12">
+                        <line cap="round" fade="12" outline="highway-minor-casing" stroke="#cfcdca"/>
+                    </m>
+                    <m zoom-min="13">
+                        <line cap="round" fade="13" outline="highway-minor-casing" stroke="#cfcdca"/>
+                        <line cap="round" fade="13" outline="highway-minor" stroke="#ffffff"/>
+                    </m>
+                    <m zoom-min="14">
+                        <line cap="round" fade="14" outline="highway-minor-casing" stroke="#cfcdca"/>
+                        <line cap="round" fade="14" outline="highway-minor" stroke="#ffffff"/>
+                    </m>
+                </m>
+            </m>
+            <m v="motorway">
+                <m k="brunnel" v="-|bridge|tunnel">
+                    <m zoom-min="4">
+                        <line cap="butt" fade="4" outline="highway-motorway-casing" stroke="#e9ac77" width="1"/>
+                    </m>
+                    <m zoom-min="20">
+                        <line cap="round" fade="20" outline="highway-motorway" stroke="#ffcc88" width="18"/>
+                        <line cap="butt" fade="20" outline="highway-motorway-casing" stroke="#e9ac77" width="22"/>
+                        <line cap="round" fade="20" outline="highway-motorway-link" stroke="#ffcc88" width="11"/>
+                        <line cap="round" fade="20" outline="highway-motorway-link-casing" stroke="#e9ac77" width="15"/>
+                    </m>
+                    <m zoom-min="5">
+                        <line cap="butt" fade="5" outline="highway-motorway-casing" stroke="#e9ac77" width="1"/>
+                    </m>
+                    <m zoom-min="6">
+                        <line cap="butt" fade="6" outline="highway-motorway-casing" stroke="#e9ac77" width="1"/>
+                        <line cap="round" fade="6" outline="highway-motorway" stroke="#ffcc88" width="1"/>
+                    </m>
+                    <m zoom-min="12">
+                        <line cap="round" fade="12" outline="highway-motorway-link-casing" stroke="#e9ac77" width="1"/>
+                        <line cap="round" fade="12" outline="highway-motorway-link" stroke="#ffcc88" width="1"/>
+                    </m>
+                    <m zoom-min="13">
+                        <line cap="round" fade="13" outline="highway-motorway-link" stroke="#ffcc88" width="1"/>
+                        <line cap="round" fade="13" outline="highway-motorway-link-casing" stroke="#e9ac77" width="3"/>
+                    </m>
+                    <m zoom-min="7">
+                        <line cap="round" fade="7" outline="highway-motorway" stroke="#ffcc88" width="1"/>
+                        <line cap="butt" fade="7" outline="highway-motorway-casing" stroke="#e9ac77" width="1"/>
+                    </m>
+                    <m zoom-min="14">
+                        <line cap="round" fade="14" outline="highway-motorway-link" stroke="#ffcc88" width="2"/>
+                        <line cap="round" fade="14" outline="highway-motorway-link-casing" stroke="#e9ac77" width="4"/>
+                    </m>
+                </m>
+            </m>
+            <m v="service|track">
+                <m k="brunnel" v="tunnel">
+                    <m zoom-min="16">
+                        <line fade="16" outline="tunnel-service-track" stroke="#ffffff" width="2"/>
+                        <line fade="16" outline="tunnel-service-track-casing" stroke="#cfcdca" width="4"/>
+                    </m>
+                    <m zoom-min="20">
+                        <line fade="20" outline="tunnel-service-track" stroke="#ffffff" width="7"/>
+                        <line fade="20" outline="tunnel-service-track-casing" stroke="#cfcdca" width="11"/>
+                    </m>
+                    <m zoom-min="15">
+                        <line fade="15" outline="tunnel-service-track-casing" stroke="#cfcdca" width="1"/>
+                        <line fade="15" outline="tunnel-service-track" stroke="#ffffff" width="1"/>
+                    </m>
+                </m>
+            </m>
+        </m>
+    </m>
+</rendertheme>

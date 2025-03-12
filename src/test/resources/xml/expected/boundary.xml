@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#f8f4f0" version="1" xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
+      
+    <!--###### TEXT styles ######-->
+       
+    <!--###### AREA styles ######-->
+       
+    <!--###### LINE styles ######-->
+      
+    <!--boundary-land-level-4-->
+    <style-line id="boundary-land-level-4" stroke="#9e9cab"/>
+     
+    <!--boundary-land-level-2-->
+    <style-line cap="round" id="boundary-land-level-2" stroke="#a4a2ae"/>
+     
+    <!--boundary-land-disputed-->
+    <style-line cap="round" id="boundary-land-disputed" stroke="#afadb8"/>
+     
+    <!--boundary-water-->
+    <style-line cap="round" id="boundary-water" stroke="#ff9abdd6"/>
+     
+    <!--boundary-land-level-9-->
+    <style-line id="boundary-land-level-9" stroke="#9e9cab"/>
+      
+    <!--###### SYMBOL styles ######-->
+       
+    <!--###### ASSIGNMENT ######-->
+     
+    <m k="layer" v="boundary">
+        <m k="admin_level">
+            <m v="2">
+                <m k="maritime" v="-|1">
+                    <m k="disputed" v="-|1">
+                        <m zoom-min="0">
+                            <line cap="round" fix="true" outline="boundary-land-level-2" stroke="#a4a2ae" width="0.6"/>
+                        </m>
+                        <m zoom-min="4">
+                            <line cap="round" fix="true" outline="boundary-land-level-2" stroke="#a4a2ae" width="1.4"/>
+                        </m>
+                        <m zoom-min="5">
+                            <line cap="round" fix="true" outline="boundary-land-level-2" stroke="#a4a2ae" width="2.0"/>
+                        </m>
+                        <m zoom-min="12">
+                            <line cap="round" fix="true" outline="boundary-land-level-2" stroke="#a4a2ae" width="8.0"/>
+                        </m>
+                    </m>
+                </m>
+                <m k="maritime" minzoom="4" v="1">
+                    <m zoom-min="0">
+                        <line cap="round" fix="true" outline="boundary-water" stroke="#ff9abdd6" width="0.6"/>
+                    </m>
+                    <m zoom-min="4">
+                        <line cap="round" fix="true" outline="boundary-water" stroke="#ff9abdd6" width="1.4"/>
+                    </m>
+                    <m zoom-min="5">
+                        <line cap="round" fix="true" outline="boundary-water" stroke="#ff9abdd6" width="2.0"/>
+                    </m>
+                    <m zoom-min="12">
+                        <line cap="round" fix="true" outline="boundary-water" stroke="#ff9abdd6" width="8.0"/>
+                    </m>
+                </m>
+            </m>
+            <m v="4">
+                <m k="maritime" minzoom="4" v="1">
+                    <m zoom-min="0">
+                        <line cap="round" fix="true" outline="boundary-water" stroke="#ff9abdd6" width="0.6"/>
+                    </m>
+                    <m zoom-min="4">
+                        <line cap="round" fix="true" outline="boundary-water" stroke="#ff9abdd6" width="1.4"/>
+                    </m>
+                    <m zoom-min="5">
+                        <line cap="round" fix="true" outline="boundary-water" stroke="#ff9abdd6" width="2.0"/>
+                    </m>
+                    <m zoom-min="12">
+                        <line cap="round" fix="true" outline="boundary-water" stroke="#ff9abdd6" width="8.0"/>
+                    </m>
+                </m>
+            </m>
+            <m v="9">
+                <m zoom-min="4">
+                    <line fix="true" outline="boundary-land-level-9" stroke="#9e9cab" width="0.4"/>
+                </m>
+                <m zoom-min="5">
+                    <line fix="true" outline="boundary-land-level-9" stroke="#9e9cab" width="1.0"/>
+                </m>
+                <m zoom-min="12">
+                    <line fix="true" outline="boundary-land-level-9" stroke="#9e9cab" width="3.0"/>
+                </m>
+            </m>
+            <m v="3|4|5|6|7|8">
+                <m k="maritime" minzoom="2" v="-|1">
+                    <m zoom-min="4">
+                        <line fix="true" outline="boundary-land-level-4" stroke="#9e9cab" width="0.4"/>
+                    </m>
+                    <m zoom-min="5">
+                        <line fix="true" outline="boundary-land-level-4" stroke="#9e9cab" width="1.0"/>
+                    </m>
+                    <m zoom-min="12">
+                        <line fix="true" outline="boundary-land-level-4" stroke="#9e9cab" width="3.0"/>
+                    </m>
+                </m>
+            </m>
+        </m>
+        <m k="maritime" v="-|1">
+            <m k="disputed" v="1">
+                <m zoom-min="0">
+                    <line cap="round" fix="true" outline="boundary-land-disputed" stroke="#afadb8" width="0.6"/>
+                </m>
+                <m zoom-min="4">
+                    <line cap="round" fix="true" outline="boundary-land-disputed" stroke="#afadb8" width="1.4"/>
+                </m>
+                <m zoom-min="5">
+                    <line cap="round" fix="true" outline="boundary-land-disputed" stroke="#afadb8" width="2.0"/>
+                </m>
+                <m zoom-min="12">
+                    <line cap="round" fix="true" outline="boundary-land-disputed" stroke="#afadb8" width="8.0"/>
+                </m>
+            </m>
+        </m>
+    </m>
+</rendertheme>

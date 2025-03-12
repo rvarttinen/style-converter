@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#f8f4f0" version="1" xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
+      
+    <!--###### TEXT styles ######-->
+       
+    <!--###### AREA styles ######-->
+      
+    <!--building-->
+    <style-area id="building"/>
+     
+    <!--building-top-->
+    <style-area fade="16" fill="#f2eae2" id="building-top"/>
+      
+    <!--###### LINE styles ######-->
+       
+    <!--###### SYMBOL styles ######-->
+       
+    <!--###### ASSIGNMENT ######-->
+     
+    <m k="layer" v="building|building:part">
+        <m k="class">
+			<m v="building">
+				<m zoom-max="16">
+					<area fade="16" fill="#dfdbd7" use="building"/>
+					<line use="building-top"/>
+				</m>
+				<m zoom-max="15">
+					<area fade="15" fill="#f2eae2" use="building"/>
+					<line use="building-top"/>
+				</m>
+			</m>
+		</m>        
+        <m zoom-min="17">
+            <extrusion line-color="#ffd9d8d6" side-color="#eaecebe9" top-color="#eaf9f8f6" />
+        </m>
+    </m>
+</rendertheme>

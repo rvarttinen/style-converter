@@ -1,0 +1,139 @@
+{
+	"version": 8,
+	"name": "building",
+	"metadata": {
+		"mapbox:autocomposite": false,
+		"mapbox:groups": {
+			"1444849242106.713": {
+				"collapsed": false,
+				"name": "Places"
+			},
+			"1444849334699.1902": {
+				"collapsed": true,
+				"name": "Bridges"
+			},
+			"1444849345966.4436": {
+				"collapsed": false,
+				"name": "Roads"
+			},
+			"1444849354174.1904": {
+				"collapsed": true,
+				"name": "Tunnels"
+			},
+			"1444849364238.8171": {
+				"collapsed": false,
+				"name": "Buildings"
+			},
+			"1444849382550.77": {
+				"collapsed": false,
+				"name": "Water"
+			},
+			"1444849388993.3071": {
+				"collapsed": false,
+				"name": "Land"
+			}
+		},
+		"mapbox:type": "template",
+		"openmaptiles:mapbox:owner": "openmaptiles",
+		"openmaptiles:mapbox:source:url": "mapbox://openmaptiles.4qljc88t",
+		"openmaptiles:version": "3.x"
+	},
+	"center": [
+		0,
+		0
+	],
+	"zoom": 1,
+	"bearing": 0,
+	"pitch": 0,
+	"sources": {
+		"openmaptiles": {
+			"type": "vector",
+			"url": "https://api.maptiler.com/tiles/v3/tiles.json?key={key}"
+		}
+	},
+	"sprite": "https://openmaptiles.github.io/osm-bright-gl-style/sprite",
+	"glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={key}",
+	"layers": [
+		{
+			"id": "background",
+			"type": "background",
+			"paint": {
+				"background-color": "#f8f4f0"
+			}
+		},
+		{
+			"id": "building",
+			"type": "fill",
+			"metadata": {
+				"mapbox:group": "1444849364238.8171"
+			},
+			"source": "openmaptiles",
+			"source-layer": "building",
+			"paint": {
+				"fill-antialias": true,
+				"fill-color": {
+					"base": 1, 	
+					"stops": [
+						[
+							15.5,
+							"#f2eae2"
+						],
+						[
+							16,
+							"#dfdbd7"
+						]
+					]
+				}
+			}
+		},
+		{
+			"id": "building-top",
+			"type": "fill",
+			"metadata": {
+				"mapbox:group": "1444849364238.8171"
+			},
+			"source": "openmaptiles",
+			"source-layer": "building",
+			"layout": {
+				"visibility": "visible"
+			},
+			"paint": {
+				"fill-color": "#f2eae2",
+				"fill-opacity": {
+					"base": 1,
+					"stops": [
+						[
+							13,
+							0
+						],
+						[
+							16,
+							1
+						]
+					]
+				},
+				"fill-outline-color": "#dfdbd7",
+				"fill-translate": {
+					"base": 1,
+					"stops": [
+						[
+							14,
+							[
+								0,
+								0
+							]
+						],
+						[
+							16,
+							[
+								-2,
+								-2
+							]
+						]
+					]
+				}
+			}
+		}
+	],
+	"id": "building"
+}

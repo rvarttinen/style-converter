@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#e8e5d8" version="1" xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
+      
+    <!--###### TEXT styles ######-->
+      
+    <!--place-other-->
+    <style-text fill="#663333" id="place-other" k="name" text-font="Noto Sans Bold"/>
+     
+    <!--place-village-->
+    <style-text fill="#333333" id="place-village" k="name" text-font="Noto Sans Regular"/>
+     
+    <!--place-town-->
+    <style-text fill="#333333" id="place-town" k="name" text-font="Noto Sans Regular"/>
+     
+    <!--place-city-->
+    <style-text fill="#333333" id="place-city" k="name" text-font="Noto Sans Regular"/>
+     
+    <!--place-city-capital-->
+    <style-text fill="#333333" id="place-city-capital" k="name" text-font="Noto Sans Regular"/>
+     
+    <!--place-state-->
+    <style-text fill="#663333" id="place-state" k="name" text-font="Noto Sans Bold"/>
+     
+    <!--place-country-other-->
+    <style-text fill="#333344" id="place-country-other" k="name" text-font="Noto Sans Italic"/>
+     
+    <!--place-country-3-->
+    <style-text fill="#333344" id="place-country-3" k="name" text-font="Noto Sans Bold"/>
+     
+    <!--place-country-1-->
+    <style-text fill="#333344" id="place-country-1" k="name" text-font="Noto Sans Bold"/>
+     
+    <!--place-continent-->
+    <style-text fill="#333344" id="place-continent" k="name" size="14" text-font="Noto Sans Bold"/>
+      
+    <!--###### AREA styles ######-->
+       
+    <!--###### LINE styles ######-->
+       
+    <!--###### SYMBOL styles ######-->
+      
+    <!--place-city-capital-->
+    <style-symbol id="place-city-capital" src="${xmlunit.ignore}"/>
+      
+    <!--###### ASSIGNMENT ######-->
+     
+    <m k="layer" v="place">
+        <m k="class">
+            <m v="province|hamlet|borough|suburb|quarter|neighbourhood|isolated_dwelling|island|aboriginal_lands">
+                <m zoom-max="12">
+                    <caption fill="#663333" font="Noto Sans Bold" font-style="bold" k="name" priority="1" size="10"/>
+                </m>
+                <m zoom-min="15">
+                    <caption fill="#663333" font="Noto Sans Bold" font-style="bold" k="name" priority="1" size="14"/>
+                </m>
+            </m>
+            <m v="village">
+                <m zoom-max="10">
+                    <caption fill="#333333" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12"/>
+                </m>
+                <m zoom-min="15">
+                    <caption fill="#333333" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="22"/>
+                </m>
+            </m>
+            <m v="town">
+                <m zoom-max="10">
+                    <caption fill="#333333" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="14"/>
+                </m>
+                <m zoom-min="15">
+                    <caption fill="#333333" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="24"/>
+                </m>
+            </m>
+            <m v="city">
+                <m k="capital" v="-|2">
+                    <m zoom-max="7">
+                        <caption fill="#333333" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="14"/>
+                    </m>
+                    <m zoom-min="11">
+                        <caption fill="#333333" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="24"/>
+                    </m>
+                </m>
+            </m>
+            <m v="city">
+                <m k="capital" v="2">
+                    <symbol use="place-city-capital"/>
+                    <m zoom-max="7">
+                        <caption dy="20" fill="#333333" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="14"/>
+                    </m>
+                    <m zoom-min="11">
+                        <caption dy="20" fill="#333333" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="24"/>
+                    </m>
+                </m>
+            </m>
+            <m v="state">
+                <m zoom-max="12">
+                    <caption fill="#663333" font="Noto Sans Bold" font-style="bold" k="name" priority="1" size="10"/>
+                </m>
+                <m zoom-min="15">
+                    <caption fill="#663333" font="Noto Sans Bold" font-style="bold" k="name" priority="1" size="14"/>
+                </m>
+            </m>
+            <m v="country">
+                <m k="rank" v="3|4|5|6">
+                    <m zoom-max="3">
+                        <caption fill="#333344" font="Noto Sans Italic" font-style="italic" k="name" priority="1" size="11"/>
+                    </m>
+                    <m zoom-min="7">
+                        <caption fill="#333344" font="Noto Sans Italic" font-style="italic" k="name" priority="1" size="17"/>
+                    </m>
+                </m>
+            </m>
+            <m v="country">
+                <m k="rank" v="3|4|5|6">
+                    <m zoom-max="3">
+                        <caption fill="#333344" font="Noto Sans Bold" font-style="bold" k="name" priority="1" size="11"/>
+                    </m>
+                    <m zoom-min="7">
+                        <caption fill="#333344" font="Noto Sans Bold" font-style="bold" k="name" priority="1" size="17"/>
+                    </m>
+                </m>
+            </m>
+            <m v="country">
+                <m k="rank" v="1">
+                    <m zoom-max="1">
+                        <caption fill="#333344" font="Noto Sans Bold" font-style="bold" k="name" priority="1" size="11"/>
+                    </m>
+                    <m zoom-min="4">
+                        <caption fill="#333344" font="Noto Sans Bold" font-style="bold" k="name" priority="1" size="17"/>
+                    </m>
+                </m>
+            </m>
+            <m v="continent">
+                <caption fill="#333344" font="Noto Sans Bold" font-style="bold" k="name" priority="1" size="14"/>
+            </m>
+        </m>
+    </m>
+</rendertheme>

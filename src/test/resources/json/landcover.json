@@ -1,0 +1,101 @@
+{
+	"version": 8,
+	"name": "landcover",
+	"metadata": {
+		"mapbox:autocomposite": false,
+		"mapbox:groups": {
+			"1444849242106.713": {
+				"collapsed": false,
+				"name": "Places"
+			}
+		},
+		"mapbox:type": "template",
+		"openmaptiles:mapbox:owner": "openmaptiles",
+		"openmaptiles:mapbox:source:url": "mapbox://openmaptiles.4qljc88t",
+		"openmaptiles:version": "3.x"
+	},
+	"center": [
+		0,
+		0
+	],
+	"zoom": 1,
+	"bearing": 0,
+	"pitch": 0,
+	"sources": {
+		"openmaptiles": {
+			"type": "vector",
+			"url": "https://api.maptiler.com/tiles/v3/tiles.json?key={key}"
+		}
+	},
+	"sprite": "https://openmaptiles.github.io/osm-bright-gl-style/sprite",
+	"glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={key}",
+	"layers": [
+		{
+			"id": "background",
+			"type": "background",
+			"paint": {
+				"background-color": "#f8f4f0"
+			}
+		},
+		{
+      "id": "landcover-glacier",
+      "type": "fill",
+      "metadata": {"mapbox:group": "1444849388993.3071"},
+      "source": "openmaptiles",
+      "source-layer": "landcover",
+      "filter": ["==", "subclass", "glacier"],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "#fff",
+        "fill-opacity": {"base": 1, "stops": [[0, 0.9], [10, 0.3]]}
+      }
+    },
+    {
+      "id": "landcover-wood",
+      "type": "fill",
+      "metadata": {"mapbox:group": "1444849388993.3071"},
+      "source": "openmaptiles",
+      "source-layer": "landcover",
+      "filter": ["==", "class", "wood"],
+      "paint": {
+        "fill-antialias": {"base": 1, "stops": [[0, false], [9, true]]},
+        "fill-color": "#6a4",
+        "fill-opacity": 0.1,
+        "fill-outline-color": "hsla(0, 0%, 0%, 0.03)"
+      }
+    },
+	{
+      "id": "landcover-grass",
+      "type": "fill",
+      "metadata": {"mapbox:group": "1444849388993.3071"},
+      "source": "openmaptiles",
+      "source-layer": "landcover",
+      "filter": ["==", "class", "grass"],
+      "paint": {"fill-color": "#d8e8c8", "fill-opacity": 1}
+    },
+    {
+      "id": "landcover-ice-shelf",
+      "type": "fill",
+      "metadata": {"mapbox:group": "1444849382550.77"},
+      "source": "openmaptiles",
+      "source-layer": "landcover",
+      "filter": ["==", "subclass", "ice_shelf"],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "#fff",
+        "fill-opacity": {"base": 1, "stops": [[0, 0.9], [10, 0.3]]}
+      }
+    },
+    {
+      "id": "landcover-sand",
+      "type": "fill",
+      "metadata": {"mapbox:group": "1444849382550.77"},
+      "source": "openmaptiles",
+      "source-layer": "landcover",
+      "filter": ["all", ["==", "class", "sand"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(245, 238, 188, 1)", "fill-opacity": 1}
+    }		
+	],
+	"id": "landcover"
+}

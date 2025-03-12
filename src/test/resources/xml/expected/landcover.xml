@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#f8f4f0" version="1" xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
+      
+    <!--###### TEXT styles ######-->
+       
+    <!--###### AREA styles ######-->
+      
+    <!--landcover-glacier-->
+    <style-area fade="10" fill="#ffffff" id="landcover-glacier"/>
+     
+    <!--landcover-wood-->
+    <style-area fill="#1966aa44" id="landcover-wood"/>
+     
+    <!--landcover-grass-->
+    <style-area fill="#ffd8e8c8" id="landcover-grass"/>
+     
+    <!--landcover-ice-shelf-->
+    <style-area fade="10" fill="#ffffff" id="landcover-ice-shelf"/>
+     
+    <!--landcover-sand-->
+    <style-area fill="#fff5eebc" id="landcover-sand"/>
+      
+    <!--###### LINE styles ######-->
+      
+    <!--landcover-wood-->
+    <style-line id="landcover-wood" stroke="#07000000"/>
+      
+    <!--###### SYMBOL styles ######-->
+       
+    <!--###### ASSIGNMENT ######-->
+     
+    <m k="layer" v="landcover">
+        <m k="class">
+            <m v="wood">
+                <area use="landcover-wood"/>
+            </m>
+            <m v="grass">
+                <area use="landcover-grass"/>
+            </m>
+            <m v="sand">
+                <area use="landcover-sand"/>
+            </m>
+        </m>
+    </m>
+</rendertheme>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#f8f4f0" version="1" xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
+      
+    <!--###### TEXT styles ######-->
+       
+    <!--###### AREA styles ######-->
+       
+    <!--###### LINE styles ######-->
+      
+    <!--aeroway-taxiway-casing-->
+    <style-line cap="round" id="aeroway-taxiway-casing" stroke="#ff999999"/>
+     
+    <!--aeroway-runway-casing-->
+    <style-line cap="round" id="aeroway-runway-casing" stroke="#ff999999"/>
+     
+    <!--aeroway-taxiway-->
+    <style-line cap="round" id="aeroway-taxiway" stroke="#ffffffff"/>
+     
+    <!--aeroway-runway-->
+    <style-line cap="round" id="aeroway-runway" stroke="#ffffffff"/>
+      
+    <!--###### SYMBOL styles ######-->
+       
+    <!--###### ASSIGNMENT ######-->
+     
+    <m k="layer" v="aeroway">
+        <m k="class">
+            <m v="taxiway">
+                <m zoom-min="17">
+                    <line fade="17" outline="aeroway-taxiway-casing" use="aeroway-taxiway-casing" width="12"/>
+                </m>
+                <m zoom-min="11">
+                    <line fade="11" outline="aeroway-taxiway-casing" use="aeroway-taxiway-casing" width="2"/>
+                </m>
+            </m>
+            <m v="runway">
+                <m zoom-min="17">
+                    <line fade="17" outline="aeroway-runway-casing" use="aeroway-runway-casing" width="55"/>
+                </m>
+                <m zoom-min="11">
+                    <line fade="11" outline="aeroway-runway-casing" use="aeroway-runway-casing" width="5"/>
+                </m>
+            </m>
+            <m v="taxiway">
+                <m zoom-min="17">
+                    <line fade="17" outline="aeroway-taxiway" use="aeroway-taxiway" width="10"/>
+                </m>
+                <m zoom-min="11">
+                    <line fade="11" outline="aeroway-taxiway" use="aeroway-taxiway" width="1"/>
+                </m>
+            </m>
+            <m v="runway">
+                <m zoom-min="17">
+                    <line fade="17" outline="aeroway-runway" use="aeroway-runway" width="50"/>
+                </m>
+                <m zoom-min="11">
+                    <line fade="11" outline="aeroway-runway" use="aeroway-runway" width="4"/>
+                </m>
+            </m>
+        </m>
+    </m>
+</rendertheme>

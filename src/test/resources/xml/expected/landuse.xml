@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#f8f4f0" version="1" xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
+      
+    <!--###### TEXT styles ######-->
+       
+    <!--###### AREA styles ######-->
+      
+    <!--landuse-residential-->
+    <style-area id="landuse-residential"/>
+     
+    <!--landuse-commercial-->
+    <style-area fill="#3af2caca" id="landuse-commercial"/>
+     
+    <!--landuse-industrial-->
+    <style-area fill="#57fff4c2" id="landuse-industrial"/>
+     
+    <!--landuse-cemetery-->
+    <style-area fill="#e0e4dd" id="landuse-cemetery"/>
+     
+    <!--landuse-hospital-->
+    <style-area fill="#ffddee" id="landuse-hospital"/>
+     
+    <!--landuse-school-->
+    <style-area fill="#f0e8f8" id="landuse-school"/>
+     
+    <!--landuse-railway-->
+    <style-area fill="#66eae6e1" id="landuse-railway"/>
+     
+    <!--landuse-military-->
+    <style-area id="landuse-military"/>
+      
+    <!--###### LINE styles ######-->
+       
+    <!--###### SYMBOL styles ######-->
+       
+    <!--###### ASSIGNMENT ######-->
+     
+    <m k="layer" v="landuse">
+        <m k="class">
+            <m v="residential|suburb|neighbourhood">
+                <m zoom-max="16">
+                    <area fade="16" fill="#33eae6e1" use="landuse-residential"/>
+                </m>
+                <m zoom-max="12">
+                    <area fade="12" fill="#66eae6e1" use="landuse-residential"/>
+                </m>
+            </m>
+            <m v="commercial">
+                <area use="landuse-commercial"/>
+            </m>
+            <m v="industrial|garages|dam">
+                <area use="landuse-industrial"/>
+            </m>
+            <m v="cemetery">
+                <area use="landuse-cemetery"/>
+            </m>
+            <m v="hospital">
+                <area use="landuse-hospital"/>
+            </m>
+            <m v="school">
+                <area use="landuse-school"/>
+            </m>
+            <m v="railway">
+                <area use="landuse-railway"/>
+            </m>
+            <m v="military">
+                <m zoom-max="10">
+                    <area fade="10" fill="#eeedea" use="landuse-military"/>
+                </m>
+                <m zoom-max="13">
+                    <area fade="13" fill="#f5e1a4" use="landuse-military"/>
+                </m>
+            </m>
+        </m>
+    </m>
+</rendertheme>

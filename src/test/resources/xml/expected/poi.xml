@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#f8f4f0" version="1" xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
+      
+    <!--###### TEXT styles ######-->
+    
+    <!--poi-level-1-->
+    <style-text fill="#666666" id="poi-level-1" k="name" size="12" text-font="Noto Sans Regular"/>
+     
+    <!--poi-railway-->
+    <style-text fill="#666666" id="poi-railway" k="name" size="12" text-font="Noto Sans Regular"/>
+    
+    <!--###### AREA styles ######-->
+       
+    <!--###### LINE styles ######-->
+       
+    <!--###### SYMBOL styles ######-->
+      
+    <!--poi-level-1-shop-->
+    <style-symbol id="poi-level-1-shop" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-office-->
+    <style-symbol id="poi-level-1-office" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-town_hall-->
+    <style-symbol id="poi-level-1-town_hall" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-golf-->
+    <style-symbol id="poi-level-1-golf" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-fast_food-->
+    <style-symbol id="poi-level-1-fast_food" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-park-->
+    <style-symbol id="poi-level-1-park" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-bus-->
+    <style-symbol id="poi-level-1-bus" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-railway-->
+    <style-symbol id="poi-level-1-railway" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-aerialway-->
+    <style-symbol id="poi-level-1-aerialway" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-entrance-->
+    <style-symbol id="poi-level-1-entrance" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-campsite-->
+    <style-symbol id="poi-level-1-campsite" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-laundry-->
+    <style-symbol id="poi-level-1-laundry" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-grocery-->
+    <style-symbol id="poi-level-1-grocery" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-library-->
+    <style-symbol id="poi-level-1-library" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-college-->
+    <style-symbol id="poi-level-1-college" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-lodging-->
+    <style-symbol id="poi-level-1-lodging" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-ice_cream-->
+    <style-symbol id="poi-level-1-ice_cream" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-post-->
+    <style-symbol id="poi-level-1-post" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-cafe-->
+    <style-symbol id="poi-level-1-cafe" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-school-->
+    <style-symbol id="poi-level-1-school" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-alcohol_shop-->
+    <style-symbol id="poi-level-1-alcohol_shop" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-bar-->
+    <style-symbol id="poi-level-1-bar" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-harbor-->
+    <style-symbol id="poi-level-1-harbor" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-car-->
+    <style-symbol id="poi-level-1-car" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-hospital-->
+    <style-symbol id="poi-level-1-hospital" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-cemetery-->
+    <style-symbol id="poi-level-1-cemetery" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-attraction-->
+    <style-symbol id="poi-level-1-attraction" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-beer-->
+    <style-symbol id="poi-level-1-beer" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-music-->
+    <style-symbol id="poi-level-1-music" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-stadium-->
+    <style-symbol id="poi-level-1-stadium" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-art_gallery-->
+    <style-symbol id="poi-level-1-art_gallery" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-clothing_store-->
+    <style-symbol id="poi-level-1-clothing_store" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-swimming-->
+    <style-symbol id="poi-level-1-swimming" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-castle-->
+    <style-symbol id="poi-level-1-castle" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-atm-->
+    <style-symbol id="poi-level-1-atm" src="${xmlunit.ignore}"/>
+     
+    <!--poi-level-1-fuel-->
+    <style-symbol id="poi-level-1-fuel" src="${xmlunit.ignore}"/>
+     
+    <!--poi-railway-->
+    <style-symbol id="poi-railway" src="${xmlunit.ignore}"/>
+      
+	<!--###### ASSIGNMENT ######-->
+     
+    <m k="layer" v="poi">
+        <m k="class">
+         	<m v="railway">
+                <symbol use="poi-railway"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="shop">
+                <symbol use="poi-level-1-shop"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="office">
+                <symbol use="poi-level-1-office"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="town_hall">
+                <symbol use="poi-level-1-town_hall"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="golf">
+                <symbol use="poi-level-1-golf"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="fast_food">
+                <symbol use="poi-level-1-fast_food"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="park">
+                <symbol use="poi-level-1-park"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="bus">
+                <symbol use="poi-level-1-bus"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="railway">
+                <symbol use="poi-level-1-railway"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="aerialway">
+                <symbol use="poi-level-1-aerialway"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="entrance">
+                <symbol use="poi-level-1-entrance"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="campsite">
+                <symbol use="poi-level-1-campsite"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="laundry">
+                <symbol use="poi-level-1-laundry"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="grocery">
+                <symbol use="poi-level-1-grocery"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="library">
+                <symbol use="poi-level-1-library"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="college">
+                <symbol use="poi-level-1-college"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="lodging">
+                <symbol use="poi-level-1-lodging"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="ice_cream">
+                <symbol use="poi-level-1-ice_cream"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="post">
+                <symbol use="poi-level-1-post"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="cafe">
+                <symbol use="poi-level-1-cafe"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="school">
+                <symbol use="poi-level-1-school"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="alcohol_shop">
+                <symbol use="poi-level-1-alcohol_shop"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="bar">
+                <symbol use="poi-level-1-bar"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="harbor">
+                <symbol use="poi-level-1-harbor"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="car">
+                <symbol use="poi-level-1-car"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="hospital">
+                <symbol use="poi-level-1-hospital"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="cemetery">
+                <symbol use="poi-level-1-cemetery"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="attraction">
+                <symbol use="poi-level-1-attraction"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="beer">
+                <symbol use="poi-level-1-beer"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="music">
+                <symbol use="poi-level-1-music"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="stadium">
+                <symbol use="poi-level-1-stadium"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="art_gallery">
+                <symbol use="poi-level-1-art_gallery"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="clothing_store">
+                <symbol use="poi-level-1-clothing_store"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="swimming">
+                <symbol use="poi-level-1-swimming"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="castle">
+                <symbol use="poi-level-1-castle"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="atm">
+                <symbol use="poi-level-1-atm"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+            <m v="fuel">
+                <symbol use="poi-level-1-fuel"/>
+                <caption dy="-20" font="Noto Sans Regular" font-style="normal" k="name" priority="1" size="12" fill="#666666"/>
+            </m>
+        </m>
+    </m>
+</rendertheme>
+

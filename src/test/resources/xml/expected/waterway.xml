@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#f8f4f0" version="1" xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
+      
+    <!--###### TEXT styles ######-->
+       
+    <!--###### AREA styles ######-->
+       
+    <!--###### LINE styles ######-->
+      
+    <!--waterway_tunnel-->
+    <style-line cap="round" id="waterway_tunnel" stroke="#a0c8f0"/>
+     
+    <!--waterway-other-->
+    <style-line cap="round" id="waterway-other" stroke="#a0c8f0"/>
+     
+    <!--waterway-other-intermittent-->
+    <style-line cap="round" id="waterway-other-intermittent" stroke="#a0c8f0"/>
+     
+    <!--waterway-stream-canal-->
+    <style-line cap="round" id="waterway-stream-canal" stroke="#a0c8f0"/>
+     
+    <!--waterway-stream-canal-intermittent-->
+    <style-line cap="round" id="waterway-stream-canal-intermittent" stroke="#a0c8f0"/>
+     
+    <!--waterway-river-->
+    <style-line cap="round" id="waterway-river" stroke="#a0c8f0"/>
+     
+    <!--waterway-river-intermittent-->
+    <style-line cap="round" id="waterway-river-intermittent" stroke="#a0c8f0"/>
+      
+    <!--###### SYMBOL styles ######-->
+       
+    <!--###### ASSIGNMENT ######-->
+     
+    <m k="layer" v="waterway">
+        <m k="class">
+            <m v="river|stream|canal">
+                <m k="brunnel" v="tunnel">
+                    <m zoom-min="20">
+                        <line fade="20" outline="waterway_tunnel" use="waterway_tunnel" width="6"/>
+                    </m>
+                    <m zoom-min="13">
+                        <line fade="13" outline="waterway_tunnel" use="waterway_tunnel" width="0"/>
+                    </m>
+                </m>
+            </m>
+            <m>
+                <m k="intermittent" v="0">
+                    <m zoom-min="20">
+                        <line fade="20" outline="waterway-other" use="waterway-other" width="2"/>
+                    </m>
+                    <m zoom-min="13">
+                        <line fade="13" outline="waterway-other" use="waterway-other" width="0"/>
+                    </m>
+                </m>
+            </m>
+            <m>
+                <m k="intermittent" v="1">
+                    <m zoom-min="20">
+                        <line fade="20" outline="waterway-other-intermittent" use="waterway-other-intermittent" width="2"/>
+                    </m>
+                    <m zoom-min="13">
+                        <line fade="13" outline="waterway-other-intermittent" use="waterway-other-intermittent" width="0"/>
+                    </m>
+                </m>
+            </m>
+            <m v="canal|stream">
+                <m k="intermittent" v="0">
+                    <m zoom-min="20">
+                        <line fade="20" outline="waterway-stream-canal" use="waterway-stream-canal" width="6"/>
+                    </m>
+                    <m zoom-min="13">
+                        <line fade="13" outline="waterway-stream-canal" use="waterway-stream-canal" width="0"/>
+                    </m>
+                </m>
+            </m>
+            <m v="canal|stream">
+                <m k="intermittent" v="1">
+                    <m zoom-min="20">
+                        <line fade="20" outline="waterway-stream-canal-intermittent" use="waterway-stream-canal-intermittent" width="6"/>
+                    </m>
+                    <m zoom-min="13">
+                        <line fade="13" outline="waterway-stream-canal-intermittent" use="waterway-stream-canal-intermittent" width="0"/>
+                    </m>
+                </m>
+            </m>
+            <m v="river">
+                <m k="intermittent" v="0">
+                    <m zoom-min="10">
+                        <line fade="10" outline="waterway-river" use="waterway-river" width="0"/>
+                    </m>
+                    <m zoom-min="20">
+                        <line fade="20" outline="waterway-river" use="waterway-river" width="6"/>
+                    </m>
+                </m>
+            </m>
+            <m v="river">
+                <m k="intermittent" v="1">
+                    <m zoom-min="10">
+                        <line fade="10" outline="waterway-river-intermittent" use="waterway-river-intermittent" width="0"/>
+                    </m>
+                    <m zoom-min="20">
+                        <line fade="20" outline="waterway-river-intermittent" use="waterway-river-intermittent" width="6"/>
+                    </m>
+                </m>
+            </m>
+        </m>
+    </m>
+</rendertheme>

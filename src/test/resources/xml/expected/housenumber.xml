@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#f8f4f0" version="1" xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
+      
+    <!--###### TEXT styles ######-->
+      
+    <!--housenumber-->
+    <style-text id="housenumber" k="housenumber" size="10" fill="#ffd4b192" text-font="Noto Sans Regular"/>
+      
+    <!--###### AREA styles ######-->
+       
+    <!--###### LINE styles ######-->
+       
+    <!--###### SYMBOL styles ######-->
+       
+    <!--###### ASSIGNMENT ######-->
+     
+    <m k="layer" v="housenumber">
+        <m zoom-min="17">
+            <caption font="Noto Sans Regular" font-style="normal" k="housenumber" size="10" fill="#ffd4b192"/>
+        </m>
+    </m>
+</rendertheme>

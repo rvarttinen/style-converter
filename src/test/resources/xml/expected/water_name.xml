@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#f8f4f0" version="1" xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
+      
+    <!--###### TEXT styles ######-->
+      
+    <!--water-name-lakeline-->
+    <style-text fill="#74aee9" id="water-name-lakeline" k="name" size="14" text-font="Noto Sans Italic"/>
+     
+    <!--water-name-ocean-->
+    <style-text fill="#74aee9" id="water-name-ocean" k="name" size="14" text-font="Noto Sans Italic"/>
+     
+    <!--water-name-other-->
+    <style-text fill="#74aee9" id="water-name-other" k="name" text-font="Noto Sans Italic"/>
+      
+    <!--###### AREA styles ######-->
+       
+    <!--###### LINE styles ######-->
+       
+    <!--###### SYMBOL styles ######-->
+       
+    <!--###### ASSIGNMENT ######-->
+     
+    <m k="layer" v="water_name">
+        <m k="class">
+            <m v="ocean">
+                <caption fill="#74aee9" font="Noto Sans Italic" font-style="italic" k="name" priority="1" size="14"/>
+            </m>
+            <m k="class" v="-|ocean">
+                <m zoom-max="0">
+                    <caption fill="#74aee9" font="Noto Sans Italic" font-style="italic" k="name" priority="1" size="10"/>
+                </m>
+                <m zoom-min="6">
+                    <caption fill="#74aee9" font="Noto Sans Italic" font-style="italic" k="name" priority="1" size="14"/>
+                </m>
+            </m>
+        </m>
+    </m>
+</rendertheme>

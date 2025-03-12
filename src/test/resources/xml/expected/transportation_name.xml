@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#e8e5d8" version="1" xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
+      
+    <!--###### TEXT styles ######-->
+      
+    <!--highway-name-path-->
+    <style-text fill="#b49e88" id="highway-name-path" k="name" text-font="Noto Sans Regular"/>
+     
+    <!--highway-name-minor-->
+    <style-text fill="#776655" id="highway-name-minor" k="name" text-font="Noto Sans Regular"/>
+     
+    <!--highway-name-major-->
+    <style-text fill="#776655" id="highway-name-major" k="name" text-font="Noto Sans Regular"/>
+     
+    <!--highway-shield-->
+    <style-text id="highway-shield" k="ref" size="10" text-font="Noto Sans Regular"/>
+      
+    <!--###### AREA styles ######-->
+       
+    <!--###### LINE styles ######-->
+       
+    <!--###### SYMBOL styles ######-->
+      
+    <!--highway-shield-->
+    <style-symbol id="highway-shield" src="road_{ref_length}"/>
+      
+    <!--###### ASSIGNMENT ######-->
+     
+    <m k="layer" v="transportation_name">
+        <m k="class">
+            <m v="path">
+                <m zoom-min="13">
+                    <text size="12" use="highway-name-path"/>
+                </m>
+                <m zoom-min="14">
+                    <text size="13" use="highway-name-path"/>
+                </m>
+            </m>
+            <m v="minor">
+                <m zoom-min="13">
+                    <text size="12" use="highway-name-minor"/>
+                </m>
+                <m zoom-min="14">
+                    <text size="13" use="highway-name-minor"/>
+                </m>
+            </m>
+            <m v="service">
+                <m zoom-min="13">
+                    <text size="12" use="highway-name-minor"/>
+                </m>
+                <m zoom-min="14">
+                    <text size="13" use="highway-name-minor"/>
+                </m>
+            </m>
+            <m v="track">
+                <m zoom-min="13">
+                    <text size="12" use="highway-name-minor"/>
+                </m>
+                <m zoom-min="14">
+                    <text size="13" use="highway-name-minor"/>
+                </m>
+            </m>
+            <m v="primary">
+                <m zoom-min="13">
+                    <text size="12" use="highway-name-major"/>
+                </m>
+                <m zoom-min="14">
+                    <text size="13" use="highway-name-major"/>
+                </m>
+            </m>
+            <m v="secondary">
+                <m zoom-min="13">
+                    <text size="12" use="highway-name-major"/>
+                </m>
+                <m zoom-min="14">
+                    <text size="13" use="highway-name-major"/>
+                </m>
+            </m>
+            <m v="tertiary">
+                <m zoom-min="13">
+                    <text size="12" use="highway-name-major"/>
+                </m>
+                <m zoom-min="14">
+                    <text size="13" use="highway-name-major"/>
+                </m>
+            </m>
+            <m v="trunk">
+                <m zoom-min="13">
+                    <text size="12" use="highway-name-major"/>
+                </m>
+                <m zoom-min="14">
+                    <text size="13" use="highway-name-major"/>
+                </m>
+            </m>
+            <m zoom-min="8">
+                <text use="highway-shield"/>
+            </m>
+        </m>
+    </m>
+</rendertheme>

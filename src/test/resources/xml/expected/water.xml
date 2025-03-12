@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#f8f4f0" version="1" xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
+      
+    <!--###### TEXT styles ######-->
+       
+    <!--###### AREA styles ######-->
+      
+    <!--water-offset-->
+    <style-area fill="#ffa0c8f0" id="water-offset"/>
+     
+    <!--water-->
+    <style-area fill="#bfd9f2" id="water"/>
+     
+    <!--water-intermittent-->
+    <style-area fill="#b3bfd9f2" id="water-intermittent"/>
+     
+    <!--water-pattern-->
+    <style-symbol id="water-pattern" src="Users\Admin\.sprites\wave.png"/>
+      
+    <!--###### LINE styles ######-->
+       
+    <!--###### SYMBOL styles ######-->
+       
+    <!--###### ASSIGNMENT ######-->
+     
+    <m k="layer" v="water">
+        <m k="brunnel" v="-|tunnel">
+            <area mesh="true" use="water"/>
+        </m>
+        <m k="intermittent" v="1">
+            <area mesh="true" use="water-intermittent"/>
+        </m>
+        <area id="water-pattern" src="Users\Admin\.sprites\wave.png"/>
+    </m>
+</rendertheme>
