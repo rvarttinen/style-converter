@@ -8,9 +8,9 @@ Please feel free to take it for a run and suggest improvements you might immedia
 
 ## Status
 Below follows a list of items that can be improved: 
-* there are several cases of code duplication, some of which are low haning fruit to be picked asap
-* generating XML is not totally consistent, some data carrying classes should have the 'generate' method to be removed
-* parsing of the incoming JSON-data is currently processed using GSon, probably perfectly ok, but there are som ideas of replacing GSon with an ANTLR generated parser and thus iterating using  appropriate visitors for better generation of XML on-the-fly
+* there are several cases of code duplication, some of which are low hanging fruit that can be picked asap
+* generating XML is not totally consistent, the data carrying classes should have the 'generate' method removed
+* parsing of the incoming JSON-data is currently processed using GSon, probably perfectly ok, but there are som ideas of replacing GSon with an ANTLR generated parser and thus iterating using appropriate visitors for better generation of XML on-the-fly
 * More ..?..
 
 ## Building
@@ -27,7 +27,7 @@ To build this little project Maven is used.
   ```
 
 ## Usage
-There are two ways to use this lib: fom the command line or programmatically. 
+There are two ways to use this lib, fom the command line or programmatically. 
 
 Running the tool from the commandline: 
 ```
@@ -39,6 +39,6 @@ Using it prgrammatically, the entry point is through the `StyleConverter` interf
 ```
   ...
   StyleConverter converter = StyleConverter.getDefaultJsonConverter();
-  ThemeFile result = converter.convert(json);
+  ThemeFile result = converter.convert(json-string);
   ...
 ```
