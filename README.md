@@ -9,6 +9,7 @@ Please feel free to take it for a run and suggest improvements you might immedia
 ## Status
 Below follows a list of items that can be improved: 
 * there are several cases of code duplication, some of which are low hanging fruit that can be picked asap
+* adding a logger, currently nothing is logged 
 * generating XML is not totally consistent, the data carrying classes should have the 'generate' method removed
 * parsing of the incoming JSON-data is currently processed using GSon, probably perfectly ok, but there are som ideas of replacing GSon with an ANTLR generated parser and thus iterating using appropriate visitors for better generation of XML on-the-fly
 * More ..?..
