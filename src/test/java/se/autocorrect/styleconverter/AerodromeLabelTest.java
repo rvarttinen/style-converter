@@ -43,7 +43,12 @@ public class AerodromeLabelTest extends StyleConverterTestBase {
 
 		String actual = xmlRenderThemeToString(result);
 		
+		System.out.println(actual);
+		
 		String expected = readFile("/xml/expected/aerodrome_label.xml");
+		
+		System.out.println(" -- ");
+		System.out.println(expected);
 		
 		int numOfDiffs = detectDiff(actual, expected);
 		
