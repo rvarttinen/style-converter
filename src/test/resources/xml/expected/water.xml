@@ -30,6 +30,6 @@
         <m k="intermittent" v="1">
             <area mesh="true" use="water-intermittent"/>
         </m>
-        <area id="water-pattern" src="Users\Admin\.sprites\wave.png"/>
+        <area id="water-pattern" src="${xmlunit.ignore}"/>
     </m>
 </rendertheme>
