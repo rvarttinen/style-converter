@@ -61,7 +61,7 @@ import org.simpleframework.transport.connect.SocketConnection;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
-import se.autocorrect.styleconverter.NetConstants;
+import se.autocorrect.styleconverter.internal.NetConstants;
 import se.autocorrect.styleconverter.internal.sprite.SpriteExtractor;
 import se.autocorrect.styleconverter.internal.sprite.SpriteJsonDataObject;
 import se.autocorrect.styleconverter.internal.sprite.cache.SpriteCache;

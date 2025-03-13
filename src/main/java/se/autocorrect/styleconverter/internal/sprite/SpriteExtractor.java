@@ -26,8 +26,8 @@
 package se.autocorrect.styleconverter.internal.sprite;
 
 
-import static se.autocorrect.styleconverter.NetConstants.ACCEPT;
-import static se.autocorrect.styleconverter.NetConstants.APPLICATION_JSON;
+import static se.autocorrect.styleconverter.internal.NetConstants.ACCEPT;
+import static se.autocorrect.styleconverter.internal.NetConstants.APPLICATION_JSON;
 
 import java.io.IOException;
 import java.net.URI;

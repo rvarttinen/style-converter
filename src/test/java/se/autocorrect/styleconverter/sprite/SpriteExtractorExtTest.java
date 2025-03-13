@@ -49,7 +49,7 @@ import org.simpleframework.http.core.ContainerServer;
 import org.simpleframework.transport.Server;
 import org.simpleframework.transport.connect.SocketConnection;
 
-import se.autocorrect.styleconverter.NetConstants;
+import se.autocorrect.styleconverter.internal.NetConstants;
 import se.autocorrect.styleconverter.internal.sprite.SpriteExtractor;
 import se.autocorrect.styleconverter.internal.sprite.cache.SpriteCache;
 

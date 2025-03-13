@@ -23,7 +23,7 @@
  * THE SOFTWARE.
  *  
  */
-package se.autocorrect.styleconverter;
+package se.autocorrect.styleconverter.internal;
 
 
 /**
