@@ -15,7 +15,7 @@
     <style-area fill="#b3bfd9f2" id="water-intermittent"/>
      
     <!--water-pattern-->
-    <style-symbol id="water-pattern" src="Users\Admin\.sprites\wave.png"/>
+    <style-symbol id="water-pattern" src="${xmlunit.ignore}"/>
       
     <!--###### LINE styles ######-->
        

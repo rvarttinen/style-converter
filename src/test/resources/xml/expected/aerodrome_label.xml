@@ -13,7 +13,7 @@
     <!--###### SYMBOL styles ######-->
       
     <!--airport-label-major-->
-    <style-symbol id="airport-label-major" src="Users\Admin\.sprites\airport_11.png"/>
+    <style-symbol id="airport-label-major" src="${xmlunit.ignore}"/>
       
     <!--###### ASSIGNMENT ######-->
      
