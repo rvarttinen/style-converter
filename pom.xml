@@ -13,7 +13,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.13.0</version>
 				<configuration>
-					<release>17</release> 
+					<release>17</release>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -32,7 +32,7 @@
 				</configuration>
 				<executions>
 					<execution>
-						<id>make-assembly</id> 
+						<id>make-assembly</id>
 						<phase>package</phase>
 						<goals>
 							<goal>single</goal>
@@ -59,6 +59,12 @@
 			<artifactId>picocli</artifactId>
 			<version>4.7.6</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.17.0</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>

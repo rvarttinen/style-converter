@@ -28,6 +28,8 @@ package se.autocorrect.styleconverter.internal;
 
 import java.lang.reflect.Type;
 
+import org.apache.commons.lang3.StringUtils;
+
 import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
@@ -35,7 +37,6 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
 
 import se.autocorrect.styleconverter.json.JsonStyleLayerData.FilterData;
-import se.autocorrect.styleconverter.util.StringUtils;
 
 public class FilterDataDeserializer implements JsonDeserializer<FilterData> {
 

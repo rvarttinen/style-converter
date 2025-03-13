@@ -30,6 +30,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Consumer;
 
+import org.apache.commons.lang3.StringUtils;
+
 import se.autocorrect.styleconverter.internal.data.TagWithValues;
 import se.autocorrect.styleconverter.internal.data.rule.FillRuleData;
 import se.autocorrect.styleconverter.internal.data.rule.LineRuleData;
@@ -40,7 +42,6 @@ import se.autocorrect.styleconverter.internal.sprite.cache.SpriteCache;
 import se.autocorrect.styleconverter.json.JsonStyleLayerData;
 import se.autocorrect.styleconverter.json.JsonStyleLayerData.FilterData;
 import se.autocorrect.styleconverter.json.JsonStyleLayerData.PaintData;
-import se.autocorrect.styleconverter.util.StringUtils;
 
 public class AllFilterState implements RuleState {
 

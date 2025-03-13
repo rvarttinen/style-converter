@@ -39,7 +39,7 @@ import se.autocorrect.styleconverter.internal.layer.LayerState;
 import se.autocorrect.styleconverter.json.JsonStyleLayerData;
 import se.autocorrect.styleconverter.json.JsonStyleLayerData.LayoutData;
 import se.autocorrect.styleconverter.util.ColorFormatter;
-import se.autocorrect.styleconverter.util.StringUtils;
+import se.autocorrect.styleconverter.util.StringChecks;
 
 public class LineProcessor {
 
@@ -99,7 +99,7 @@ public class LineProcessor {
 
 		Object lineWidth = layer.getPaint().getLineWidth();
 
-		if (lineWidth instanceof String lineWidthStr && StringUtils.isNotNullNorEmpty(lineWidthStr)) {
+		if (lineWidth instanceof String lineWidthStr && StringChecks.isNotNullNorEmpty(lineWidthStr)) {
 
 			ld.width(lineWidthStr);
 

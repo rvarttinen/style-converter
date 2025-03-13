@@ -32,16 +32,15 @@ import java.util.stream.Stream;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
-class StringUtilsTest {
+class StringChecksTest {
 
 	@MethodSource("isNullOrEmptyValues")
 	@ParameterizedTest
 	void testIsNullOrEmpty(String str, boolean expected) {
 		
-		boolean actual = StringUtils.isNullOrEmpty(str);
+		boolean actual = StringChecks.isNullOrEmpty(str);
 		
 		assertEquals(expected, actual);
 	}
@@ -50,26 +49,11 @@ class StringUtilsTest {
 	@ParameterizedTest
 	void testIsNotNullNorEmpty(String str, boolean expected) {
 		
-		boolean actual = StringUtils.isNotNullNorEmpty(str);
+		boolean actual = StringChecks.isNotNullNorEmpty(str);
 		
 		assertEquals(expected, actual);
 	}
 
-	@ParameterizedTest
-	@CsvSource({ 
-		"name name, name",
-		"name  name, name",
-		"housenumber, housenumber",
-		"geeksfor geeks, geeksfor geeks",
-		"\"\", \"\"" // Handle empty string
-		})
-	void testRemoveDuplicates(String input, String expected) {
-		
-		String actual = StringUtils.removeDuplicates(input);
-		
-		assertEquals(expected, actual);
-	}
-	
 	static Stream<Arguments> isNullOrEmptyValues(){
 		
 		return Stream.of(
@@ -87,33 +71,6 @@ class StringUtilsTest {
 				arguments("", false),
 				arguments(" ", false),
 				arguments("string", true)
-				);
-	}
-	
-	static Stream<Arguments> endsWithValues (){
-		
-		return Stream.of(
-				arguments("end", "nd", true),
-				arguments("end", "EnD", true),
-				arguments("end", "end", true),
-				arguments("end", "END", true),
-				
-				arguments("end", "end now since", false),
-				arguments("end", "dne", false),
-				arguments("end", "en", false)
-				);
-	}
-	
-	static Stream<Arguments> startsWithValues(){
-		
-		return Stream.of(
-				arguments("start", "sta", true),
-				arguments("start", "StA", true),
-				arguments("start", "start", true),
-				arguments("start", "START", true),
-				
-				arguments("start", "gurka", false),
-				arguments("start", "tra", false)
 				);
 	}
 }

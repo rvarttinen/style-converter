@@ -29,12 +29,13 @@ package se.autocorrect.styleconverter.internal.sourcelayer;
 import java.util.List;
 import java.util.function.Consumer;
 
+import org.apache.commons.lang3.StringUtils;
+
 import se.autocorrect.styleconverter.internal.data.rule.LineRuleData;
 import se.autocorrect.styleconverter.internal.data.rule.LineRuleData.Builder;
 import se.autocorrect.styleconverter.internal.data.rule.RuleCondition;
 import se.autocorrect.styleconverter.internal.data.rule.RuleState;
 import se.autocorrect.styleconverter.json.JsonStyleLayerData;
-import se.autocorrect.styleconverter.util.StringUtils;
 
 public class AllDirectFilterState implements RuleState {
 

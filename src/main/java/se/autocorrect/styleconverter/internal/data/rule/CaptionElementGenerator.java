@@ -37,7 +37,7 @@ import se.autocorrect.styleconverter.json.JsonStyleLayerData;
 import se.autocorrect.styleconverter.json.JsonStyleLayerData.LayoutData;
 import se.autocorrect.styleconverter.json.JsonStyleLayerData.PaintData;
 import se.autocorrect.styleconverter.util.ColorFormatter;
-import se.autocorrect.styleconverter.util.StringUtils;
+import se.autocorrect.styleconverter.util.TextUtils;
 
 public class CaptionElementGenerator {
 
@@ -224,7 +224,7 @@ public class CaptionElementGenerator {
 				textField = textField.replace(":nonlatin", " ");
 			}
 
-			textField = StringUtils.removeDuplicates(textField);
+			textField = TextUtils.removeDuplicates(textField);
 			textField = textField.trim();
 
 			captionElement.setAttribute("k", textField);

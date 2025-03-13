@@ -25,12 +25,22 @@
  */
 package se.autocorrect.styleconverter.util;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-
+/**
+ * Some useful utilities for processing text fields. 
+ */
 public final class TextUtils {
 	
 	private TextUtils() { }
 
+	/**
+	 * Clean up a text field from references to {@code :latin} and {@code :nonlatin.}
+	 * 
+	 * @param textField the field to clean
+	 * @return as cleaned up field
+	 */
 	public static String cleanUpTextField(String textField) {
 		
 		if(textField.contains(":latin")) {
@@ -47,6 +57,33 @@ public final class TextUtils {
 				.replace("\r", "")
 				.trim();
 		
-		return StringUtils.removeDuplicates(textField);
+		return TextUtils.removeDuplicates(textField);
+	}
+
+	/**
+	 * Remove any duplicates from a {@code String}. This method removes only whole
+	 * words which are the same. Any multiple spaces in between words will also be
+	 * reduced to a single space in between words.
+	 * 
+	 * @param input the string to process for potential duplicates
+	 * @return the resulting string without duplicates
+	 */
+	public static String removeDuplicates(String input) {
+	
+		String duplicatePattern = "\\b([\\w\\s']+) \\1\\b";
+		Pattern p = Pattern.compile(duplicatePattern);
+	
+		// Remove any multiples of spaces in between words
+		input = input.trim().replaceAll(" +", " ");
+	
+		String result = input;
+	
+		Matcher m = p.matcher(input);
+	
+		if (m.matches()) {
+			result = m.group(1);
+		}
+	
+		return result;
 	}
 }
