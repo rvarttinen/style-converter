@@ -36,8 +36,6 @@ public final class UriUtils {
 	private UriUtils() {
 	}
 
-	// More methods will be added later when needed, and also for decoding ..
-
 	/**
 	 * Encode the given URI path.
 	 *

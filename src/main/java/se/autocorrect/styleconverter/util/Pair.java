@@ -38,8 +38,8 @@ import java.util.Objects;
 public class Pair<L, R> {
 
 	/*
-	 * TODO: as of Java 21 we should convert this class to a record so we can use it
-	 * in for Record Patters (JEP-440).
+	 * TODO: as of Java 21 we could convert this class to a record so we can use it
+	 * for Record Patters (JEP-440).
 	 * 
 	 * @see https://openjdk.org/jeps/440
 	 */
@@ -96,7 +96,7 @@ public class Pair<L, R> {
 		if (getClass() != obj.getClass())
 			return false;
 
-		Pair other = (Pair) obj;
+		Pair<?, ?> other = (Pair<?, ?>) obj;
 
 		return Objects.equals(left, other.left) && Objects.equals(right, other.right);
 	}
