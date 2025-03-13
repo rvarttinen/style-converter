@@ -29,7 +29,7 @@ To build this little project Maven is used.
   ```
 
 ## Usage
-There are two ways to use this lib, fom the command line or programmatically. 
+There are two ways to use this lib, f¨rom the command line or programmatically. 
 
 Running the tool from the commandline: 
 ```
