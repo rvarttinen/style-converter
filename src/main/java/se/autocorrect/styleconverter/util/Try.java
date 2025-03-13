@@ -198,10 +198,7 @@ public abstract class Try<T> implements Monad<T> {
 	 * @return the result on the function invocation if successful, otherwise the
 	 *         {@code defaultValue}
 	 * 
-	 * @apiNote There is no corresponding method for failures, use one of the
-	 *          recover methods in that case.
-	 * @see Try#recover(Class, Function)
-	 * @see Try#recover(Class, Object)
+	 * @apiNote There is no corresponding method for failures
 	 */
 	public <R> R onSuccess(CheckedFunction<T, R> function, R defaultValue) {
 
