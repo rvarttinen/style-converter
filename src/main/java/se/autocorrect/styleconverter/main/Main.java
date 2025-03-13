@@ -25,7 +25,6 @@
  */
 package se.autocorrect.styleconverter.main;
 
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -37,6 +36,8 @@ import java.util.concurrent.Callable;
 import java.util.stream.Collectors;
 
 import org.oscim.theme.ThemeFile;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
@@ -44,15 +45,15 @@ import picocli.CommandLine.Option;
 import se.autocorrect.styleconverter.StyleConverter;
 import se.autocorrect.styleconverter.util.Try;
 
-@Command(name = "json2xml", mixinStandardHelpOptions = true, showAtFileInUsageHelp = false,
-version = {"first draft 0.0.1", "picocli " + CommandLine.VERSION},
-header = "Convert JSON style data to XML",
-description = {
-        "The program provides a conversion mechanism for JSON styles to XML."
-	},
-	optionListHeading = "COMMAND-LINE Options%n"
-)
+@Command(name = "json2xml", mixinStandardHelpOptions = true, showAtFileInUsageHelp = false, version = {
+		"first draft 0.0.1",
+		"picocli " + CommandLine.VERSION }, header = "Convert JSON style data to XML", description = {
+				"The program provides a conversion mechanism for JSON styles to XML." }, optionListHeading = "COMMAND-LINE Options%n")
 public class Main implements Callable<Integer> {
+
+	private static Logger logger = LoggerFactory.getLogger(Main.class);
+
+	// TODO: Add verbose flag and corresponding capabilities
 
 	// TODO: Add this option with handling in the near future
 //	@Option(names = { "-s", "--spritesdir" }, description = { "Sprite directory location",
@@ -79,11 +80,11 @@ public class Main implements Callable<Integer> {
 	public Integer call() throws Exception {
 
 		int retCode = 0;
-		
+
 		Try<InputStream> tInputStream = Try.of(() -> new FileInputStream(new File(inputFile)));
 
-		if(tInputStream.isSuccess()) {
-			
+		if (tInputStream.isSuccess()) {
+
 			try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(tInputStream.get()))) {
 
 				String json = bufferedReader.lines().collect(Collectors.joining("\n"));
@@ -102,7 +103,7 @@ public class Main implements Callable<Integer> {
 
 		} else {
 
-			System.err.println("Could not read file: " + inputFile);
+			logger.error("Could not read file: {}", inputFile);
 			retCode = -1;
 		}
 

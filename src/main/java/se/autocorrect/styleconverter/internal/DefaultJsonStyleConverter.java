@@ -29,6 +29,8 @@ package se.autocorrect.styleconverter.internal;
 import java.net.URL;
 
 import org.oscim.theme.ThemeFile;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -42,13 +44,13 @@ import se.autocorrect.styleconverter.json.JsonStyleLayerData.FilterData;
 import se.autocorrect.styleconverter.json.JsonStyleMetaData;
 
 public class DefaultJsonStyleConverter implements StyleConverter {
+	
+	private static Logger logger = LoggerFactory.getLogger(DefaultJsonStyleConverter.class);
 
 	private String name;
-	private String url;
 	private SpriteExtractor extractor;
 
 	public DefaultJsonStyleConverter() {
-//		this.logger = Platform.getLog(getClass());
 		this.extractor = new SpriteExtractor();
 	}
 
@@ -70,7 +72,7 @@ public class DefaultJsonStyleConverter implements StyleConverter {
 
 		} catch (Throwable t) {
 
-//			Activator.getLogger().error("Error when converting style to theme ", t);
+			logger.error("Error when converting style to theme ", t);
 
 			throw new ConversionException(t);
 
@@ -98,7 +100,8 @@ public class DefaultJsonStyleConverter implements StyleConverter {
 	private void probeUrlForSprites(URL spriteBaseUrl) throws ConversionException {
 
 		if (spriteBaseUrl == null) {
-//			logger.info("No sprites to retrieve ... ");
+			
+			logger.info("No sprites to retrieve ... ");
 			return;
 		}
 
@@ -114,7 +117,7 @@ public class DefaultJsonStyleConverter implements StyleConverter {
 				extractor.extract(spriteBaseUrl);
 				break;
 			default:
-//				logger.info("Unrecognized protocol when attempting to extract sprites: " + protocol);
+				logger.info("Unrecognized protocol when attempting to extract sprites: {}", protocol);
 			}
 
 		} catch (Throwable t) {
