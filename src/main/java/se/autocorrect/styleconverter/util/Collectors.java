@@ -32,8 +32,8 @@ import java.util.List;
 import java.util.stream.Collector;
 
 /**
- * Implementations of Collector that implement various useful reduction
- * operations, such as collecting a single element.
+ * Implementations of Collector that implement a useful reduction
+ * operation such as collecting a single element.
  */
 public final class Collectors {
 
