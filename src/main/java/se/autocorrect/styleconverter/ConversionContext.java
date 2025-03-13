@@ -35,7 +35,7 @@ import org.w3c.dom.Element;
 import se.autocorrect.styleconverter.json.JsonStyleLayerData;
 
 /**
- * A context holding relevnat dat ato be used through out a conversion process.
+ * A context holding relevant data to be used throughout a conversion process.
  */
 public interface ConversionContext {
 
@@ -47,15 +47,17 @@ public interface ConversionContext {
 	Collection<JsonStyleLayerData> getLayers();
 
 	/**
+	 * Retrieve the layers in the data whose visibility is set to {@code true}. 
 	 *
-	 * @return
+	 * @return the visible layers
 	 */
 	Collection<JsonStyleLayerData> getVisibleLayers();
 
 	/**
+	 * Retrieve a layer by its id. 
 	 *
-	 * @param id
-	 * @return
+	 * @param id the id
+	 * @return an {@code Optional} holding the layer if present, {@code Optional#empty()} otherwise 
 	 */
 	Optional<JsonStyleLayerData> getLayerById(String id);
 
@@ -80,10 +82,4 @@ public interface ConversionContext {
 	 * @return the root element
 	 */
 	Element getRootElement();
-
-	/**
-	 *
-	 * @return
-	 */
-//	ILog getLogger();
 }
