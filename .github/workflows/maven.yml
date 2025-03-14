@@ -46,6 +46,8 @@ jobs:
             cp -a ./target/site/ ./docs/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/
       
   deploy:
     # Add a dependency to the build job
