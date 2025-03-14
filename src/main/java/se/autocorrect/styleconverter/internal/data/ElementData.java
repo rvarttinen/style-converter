@@ -30,7 +30,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 /**
- * A DTO like object holding data extarcted from a layer and used when
+ * A DTO like object holding data extracted from a layer and used when
  * generating the resulting style data.
  */
 public interface ElementData {
