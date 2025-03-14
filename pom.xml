@@ -8,6 +8,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<description>An experimental style to themes converter for VTM/Mapsforge. </description>
 
+	<properties>
+		<github.global.server>github</github.global.server>
+	</properties>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -53,10 +57,20 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.21.0</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>3.6.2</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>3.11.2</version>
 				<configuration>
-				<doclint>-missing</doclint>
+					<doclint>-missing</doclint>
 					<tags>
 						<tag>
 							<name>apiNote</name>
