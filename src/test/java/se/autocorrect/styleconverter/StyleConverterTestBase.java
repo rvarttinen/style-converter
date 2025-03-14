@@ -47,7 +47,10 @@ import org.xmlunit.placeholder.PlaceholderDifferenceEvaluator;
 
 import se.autocorrect.styleconverter.internal.DefaultJsonStyleConverter;
 
-abstract class StyleConverterTestBase {
+/**
+ * This is the base and entry point for all the source layer specific test cases. 
+ */
+public abstract class StyleConverterTestBase {
 
 	protected StyleConverter eut;
 
