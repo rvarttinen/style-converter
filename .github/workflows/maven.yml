@@ -51,7 +51,7 @@ jobs:
       
   deploy-docs:
     # Add a dependency to the build job
-    needs: docs
+    needs: build-docs
         
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
