@@ -39,7 +39,6 @@ public interface ElementData {
 	 * Generate the relevant node(s) based on element data extracted.
 	 * 
 	 * @param document the current document being generated
-	 * @param context  the context
 	 * @return the element
 	 */
 	Element generate(Document document);
