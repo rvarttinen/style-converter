@@ -50,7 +50,7 @@ jobs:
           path: docs/site/
           retention-days: 3
       
-  deploy:
+  deploy-docs:
     # Add a dependency to the build job
     needs: docs
         
