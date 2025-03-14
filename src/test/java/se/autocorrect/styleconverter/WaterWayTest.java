@@ -31,7 +31,7 @@ import java.io.IOException;
 
 import org.oscim.theme.ThemeFile;
 
-public class WaterWayTest extends StyleConverterTestBase {
+class WaterWayTest extends StyleConverterTestBase {
 
 	@Override
 	String getJsonData() throws IOException {

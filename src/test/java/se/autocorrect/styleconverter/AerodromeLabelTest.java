@@ -31,7 +31,7 @@ import java.io.IOException;
 
 import org.oscim.theme.ThemeFile;
 
-public class AerodromeLabelTest extends StyleConverterTestBase {
+class AerodromeLabelTest extends StyleConverterTestBase {
 
 	@Override
 	String getJsonData() throws IOException {
