@@ -1,4 +1,10 @@
 # style-converter
+
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/rvarttinen/style-converter/maven.yml)
+<a href="https://github.com/rvarttinen/style-converter/issues">
+      <img alt="Issues" src="https://img.shields.io/github/issues/rvarttinen/style-converter?color=0088ff" />
+</a>
+
 An experimental style to themes converter for VTM/Mapsforge. 
 
 ## Introduction
