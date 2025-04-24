@@ -12,7 +12,7 @@ Below follows a list of items that can be improved:
 * generating XML is not totally consistent, the data carrying classes should have the 'generate' method replaced
 * parsing of the incoming JSON-data is currently processed using GSon, probably perfectly ok, but there are some ideas of replacing GSon with an ANTLR generated parser and thus iterating using appropriate visitors for better generation of XML on-the-fly
 * add more logging 
-* add verbose capability to command line tool
+* add verbose capability to the command line tool
 * more ..?..
 
 ## Building
