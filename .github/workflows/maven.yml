@@ -16,7 +16,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -48,11 +47,11 @@ jobs:
         with:
           path: docs/site/
           retention-days: 3
-      
+       
   deploy-docs:
     # Add a dependency to the build job
     needs: build-docs
-        
+         
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
       contents: read
@@ -71,6 +70,19 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
 
-    # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
-    #- name: Update dependency graph
-    #  uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
+  dependency-submission:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+      - name: Generate and submit dependency graph
+        uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
