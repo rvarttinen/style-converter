@@ -106,7 +106,7 @@
 		<dependency>
 			<groupId>org.mapsforge</groupId>
 			<artifactId>vtm-desktop</artifactId>
-			<version>0.24.0</version>
+			<version>0.25.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
